@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="$(SdkVersion)" />
+    <PackageReference Include="JetBrains.Rider.Rider.Backend" Version="212.0.20210730.170511" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReSharperPlugin.StructureGlance\ReSharperPlugin.StructureGlance.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="test/**/*" />
+    <None Include="test/**/*" />
+  </ItemGroup>
+
+</Project>

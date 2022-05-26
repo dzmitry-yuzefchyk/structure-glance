@@ -1,0 +1,21 @@
+<idea-plugin require-restart="true">
+  <id>com.jetbrains.rider.plugins.structureglance</id>
+  <name>Structure Glance</name>
+  <vendor url="https://project-url">Dmitry Yuzefchik</vendor>
+  <depends>com.intellij.modules.rider</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <projectService
+            serviceImplementation="com.jetbrains.rider.plugins.structureglance.services.StructureGlanceProjectService">
+    </projectService>
+  </extensions>
+
+  <project-components>
+    <component>
+      <implementation-class>
+        com.jetbrains.rider.plugins.structureglance.views.GlancePanelInjector
+      </implementation-class>
+    </component>
+  </project-components>
+
+</idea-plugin>
